@@ -188,7 +188,9 @@ header {
 .features-container {
   min-height: 100dvh;
   background-color: var(--main-color);
-  background-image: url();
+  background-image: url("images/background-feature.jpg");
+  background-size: cover;
+  background-blend-mode: soft-light;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -199,12 +201,16 @@ header {
 
 .features-image-container {
   width: 45%;
+  height: 100%;
   overflow: hidden;
+  align-self: flex-end;
 
   & img {
     bottom: 0px;
     object-fit: contain;
     width: 80%;
+    height: 100%;
+    align-self: flex-end;
   }
 }
 
@@ -263,5 +269,34 @@ header {
       filter: contrast(300%);
       transform: translateX(20%);
     }
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  min-height: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  color: white;
+
+  & a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease-in-out;
+  }
+
+  & a:hover {
+    opacity: 0.8;
   }
 }
