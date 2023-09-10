@@ -4,6 +4,8 @@ const express = require("express");
 const path = require("path");
 const process = require("process");
 const serveHomePage = require("./Controllers/serveHomepage");
+const getFullDataByName = require("./Controllers/getFullDataByName");
+const queryNameRange = require("./Controllers/queryNameRange");
 
 // Create instance of express
 const app = express();
@@ -25,10 +27,23 @@ app.use(express.json());
 //////////////////////////////////////////////
 
 app.get("/", (req, res) => {
-
-  const _ = req;
-
   res.status(200).sendFile("./Views/index.html", { root: __dirname });
+});
+
+// API PAGE - HOW-TO GUIDE
+app.get("/api", (req, res) => {
+  res.status(200).sendFile("./Views/api-how-to.html", { root: __dirname });
+});
+
+// Route for API Request for JSON Data : url params
+app.get("/api/get/:name", getFullDataByName);
+
+// using Query String for name and start-end
+app.get("/api/query", queryNameRange);
+
+// Page Not found
+app.get("*", (req, res) => {
+  res.status(404).sendFile("./Views/404.html", { root: __dirname });
 });
 
 /**Start Http methods for server */
