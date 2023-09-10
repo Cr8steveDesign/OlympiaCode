@@ -25,6 +25,9 @@ app.use(express.json());
 //////////////////////////////////////////////
 
 app.get("/", (req, res) => {
+
+  const _ = req;
+
   res.status(200).sendFile("./Views/index.html", { root: __dirname });
 });
 

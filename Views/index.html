@@ -7,6 +7,10 @@
 	<script src="script.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
 
+  <!-- Code highlighting library -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script> -->
+
   </head>
   <body>
     <header>
@@ -42,32 +46,44 @@
         WHERE CODE BECOMES CLEARER, SIMPLER, AND MORE ACCESSIBLE!
       </h1>
       <p class="hero-tagline">
-        "Unlock the Power of Programming: Simplified Functions, Real-World Use
-        Cases, and Impeccable Syntax – All in One Place!
+        "Unlock the Power of Programming: Simplified Functions, <br/>Real-World Use Cases, and 
+        Impeccable Syntax – All in One Place!
       </p>
+      <div class="logos-container">
+        <img src="images/javascript.png" alt="Javascript" class="logos" />
+        <img src="images/react.png" alt="ReactJS" class="logos" />
+        <img src="images/nodejs.png" alt="Node.js" class="logos" />
+        <img src="images/python.png" alt="Python" class="logos" />
+        <img src="images/html.png" alt="HTML 5" class="logos" />
+        <img src="images/css.png" alt="CSS 3" class="logos" />
+      </div>
+      <a href="#feature"> <img class="arrow" src="images/arrow.gif" alt="Arrow-Animation" /></a>
+
     </main>
 
     <!--Features Section Starts Here-->
     <!--Including the list of features and image grids-->
-    <section class="features-container">
-      <div class="features-text">
+    <section class="features-container" id="feature">
         <ul class="features-list">
           <li class="feature">
-            Simplify Code with Expertly Crafted Function Summaries
+           ✅ Simplify Code with Expertly Crafted Function Summaries
           </li>
           <li class="feature">
-            Bridge the Gap Between Tutorials/Documentation and Real-World Use
-            Cases
+            ✅ Bridge the Gap Between Tutorials/Documentation
           </li>
-          <li class="feature">Master Syntax with Clear, Concise Examples</li>
-          <li class="feature">Stay Updated with our Informative Blog Posts</li>
+          <li class="feature">✅ Master Syntax with Clear, Concise Examples</li>
+          <li class="feature">✅ Stay Updated with our Informative Blog Posts</li>
+
+          <div class="button-action">
+            <input id="get-started"  type="button" value="GET STARTED"> 
+            <input id="contribute" type="button" value="SUBMIT CODE SNIPPETS!"></div>
         </ul>
-      </div>
+
 
       <!--Images Go Here-->
       <div class="features-image-container">
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src="images/happy-girl.png" alt="Happy Tech Sis" lazy loading />
+      
         <img src="" alt="" />
         <img src="" alt="" />
       </div>
@@ -96,6 +112,19 @@
 		</li>
 	  </ul>
 	</nav>
+
+  <!-- Testing Code Embedding -->
+  <!-- <pre><code class="language-javascript">
+    function helloWorld(variablee){<br>
+      const steve = "Omoregie Stephen";<br>
+      console.log(steve);
+    }
+    </code></pre> -->
+
+    <!-- End of Testing Code Embedding -->
     </footer>
+    <!-- <script>
+      Prism.highlightAll();
+    </script> -->
   </body>
 </html>
