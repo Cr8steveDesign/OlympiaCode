@@ -1,0 +1,16 @@
+{
+  "name": "code-gist-api",
+  "version": "1.0.0",
+  "description": "An api project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon App.js"
+  },
+  "author": "Stephen Omoregie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
