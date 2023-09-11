@@ -39,20 +39,37 @@
     </div>
     </header>
 
-    <!-- Hero Section -->
-    <main class="hero-container">
-      <h1 class="hero-headline">
-        ERROR 404: <br />PAGE NOTE FOUND
-      </h1>
-      <p class="hero-tagline">
-        <a href="/"> CLICK HERE TO GO BACK TO THE HOME PAGE</a>
-      </p>
-      
-      <a href="#feature"> <img class="arrow" src="images/arrow.gif" alt="Arrow-Animation" /></a>
+    <!--Features Section Starts Here-->
+    <!--Including the list of features and image grids-->
+    <section class="code-container" id="learning">
 
-    </main>
+      <div id="form-container">
+        <form action="/">
+          <label for="language">Choose From the Available Languages</label>
+          <select  name="language" id="language" >
+            <option value="JavaScript">JavaScript</option>
+            <option value="JavaScript">Python</option>
+            <option value="JavaScript">HTML</option>
+            <option value="JavaScript">CSS</option>
+          </select>
+          <div class="range">
+
+          <label for="Start"> Pick a Start Range
+            <input id="Start" type="number" name="Start" min="0" max="99">
+          </label>
+
+          <label for="End"> Pick an End Range 
+            <input id="End" type="number" name="End" min="1" max="100">
+          </label>
+        </div>
+        </form>
+      </div>      
+    </section>
+	
+
     <!--FOOTER BEGINS HERE-->
     <footer class="footer-container">
+
       <p class="copyright">
         OlympiaCode | Copyright &copy;
         <span id="footer-year">2023</span> Cre8Steve

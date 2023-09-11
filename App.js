@@ -30,6 +30,12 @@ app.get("/", (req, res) => {
   res.status(200).sendFile("./Views/index.html", { root: __dirname });
 });
 
+// Code Snippets
+// API PAGE - HOW-TO GUIDE
+app.get("/code-snippets", (req, res) => {
+  res.status(200).sendFile("./Views/code-snippets.html", { root: __dirname });
+});
+
 // API PAGE - HOW-TO GUIDE
 app.get("/api", (req, res) => {
   res.status(200).sendFile("./Views/api-how-to.html", { root: __dirname });
