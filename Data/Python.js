@@ -278,14 +278,7 @@ const python = [
     ReturnValue: "A floating-point number converted from a number or string",
     Category: "Number",
   },
-  {
-    id: 31,
-    method: "abs()",
-    syntax: "abs(x)",
-    exampleOfUse: "num = -5\nabs_num = abs(num)\n# Result: abs_num = 5",
-    ReturnValue: "The absolute value of a number",
-    Category: "Number",
-  },
+
   {
     id: 32,
     method: "round()",
@@ -335,16 +328,6 @@ const python = [
     Category: "Builtin",
   },
   {
-    id: 38,
-    method: "sum()",
-    syntax: "sum(iterable, start=0)",
-    exampleOfUse:
-      "my_list = [1, 2, 3, 4, 5]\nresult = sum(my_list)\n# Result: result = 15",
-    ReturnValue:
-      "The sum of all elements in an iterable, with an optional start value",
-    Category: "Builtin",
-  },
-  {
     id: 39,
     method: "sorted()",
     syntax: "sorted(iterable, key=None, reverse=False)",
@@ -361,16 +344,6 @@ const python = [
       "list1 = [1, 2, 3]\nlist2 = ['apple', 'banana', 'cherry']\nzipped = zip(list1, list2)\n# Result: zipped = [(1, 'apple'), (2, 'banana'), (3, 'cherry')]",
     ReturnValue:
       "An iterator of tuples, where the first item in each passed iterator is paired together",
-    Category: "Builtin",
-  },
-  {
-    id: 41,
-    method: "all()",
-    syntax: "all(iterable)",
-    exampleOfUse:
-      "my_list = [True, True, False]\nresult = all(my_list)\n# Result: result = False",
-    ReturnValue:
-      "True if all elements in the iterable are true (or empty iterable), otherwise False",
     Category: "Builtin",
   },
   {
@@ -422,23 +395,7 @@ const python = [
     ReturnValue: "A new list with elements from the iterable sorted",
     Category: "Built-in",
   },
-  {
-    id: 47,
-    method: "len()",
-    syntax: "len(iterable)",
-    exampleOfUse:
-      "my_list = [1, 2, 3, 4, 5]\nlength = len(my_list)\n# Result: length = 5",
-    ReturnValue: "The number of items in the iterable",
-    Category: "Built-in",
-  },
-  {
-    id: 48,
-    method: "abs()",
-    syntax: "abs(x)",
-    exampleOfUse: "num = -5\nabs_num = abs(num)\n# Result: abs_num = 5",
-    ReturnValue: "The absolute value of a number",
-    Category: "Built-in",
-  },
+
   {
     id: 49,
     method: "round()",
@@ -447,16 +404,6 @@ const python = [
       "num = 3.14159\nrounded = round(num, 2)\n# Result: rounded = 3.14",
     ReturnValue:
       "A number rounded to the specified number of decimal places (ndigits)",
-    Category: "Built-in",
-  },
-  {
-    id: 50,
-    method: "max()",
-    syntax: "max(iterable, *args[, key, default])",
-    exampleOfUse:
-      "my_list = [3, 1, 4, 1, 5, 9, 2]\nmax_num = max(my_list)\n# Result: max_num = 9",
-    ReturnValue:
-      "The maximum item from an iterable (or the maximum of multiple arguments)",
     Category: "Built-in",
   },
   {
@@ -477,26 +424,6 @@ const python = [
       "my_list = [1, 2, 3, 4, 5]\nresult = sum(my_list)\n# Result: result = 15",
     ReturnValue:
       "The sum of all elements in an iterable, with an optional start value",
-    Category: "Built-in",
-  },
-  {
-    id: 53,
-    method: "map()",
-    syntax: "map(function, iterable, /)",
-    exampleOfUse:
-      "my_list = [1, 2, 3]\ndoubled = map(lambda x: x * 2, my_list)\n# Result: doubled = [2, 4, 6]",
-    ReturnValue:
-      "An iterator that applies the function to all items in the iterable",
-    Category: "Built-in",
-  },
-  {
-    id: 54,
-    method: "filter()",
-    syntax: "filter(function, iterable, /)",
-    exampleOfUse:
-      "my_list = [1, 2, 3, 4, 5]\nfiltered = filter(lambda x: x % 2 == 0, my_list)\n# Result: filtered = [2, 4]",
-    ReturnValue:
-      "An iterator containing elements from the iterable for which the function returns true",
     Category: "Built-in",
   },
   {
@@ -549,24 +476,7 @@ const python = [
       "Round a number to the nearest integer or to the specified number of decimal places (ndigits)",
     Category: "Built-in",
   },
-  {
-    id: 60,
-    method: "abs()",
-    syntax: "abs(x)",
-    exampleOfUse: "num = -5\nabs_num = abs(num)\n# Result: abs_num = 5",
-    ReturnValue: "The absolute value of a number",
-    Category: "Built-in",
-  },
-  {
-    id: 61,
-    method: "sum()",
-    syntax: "sum(iterable, /, start=0)",
-    exampleOfUse:
-      "my_list = [1, 2, 3, 4, 5]\nresult = sum(my_list)\n# Result: result = 15",
-    ReturnValue:
-      "The sum of all elements in an iterable, with an optional start value",
-    Category: "Built-in",
-  },
+
   {
     id: 62,
     method: "len()",
@@ -575,16 +485,6 @@ const python = [
       "my_list = [1, 2, 3, 4, 5]\nlength = len(my_list)\n# Result: length = 5",
     ReturnValue:
       "The number of items in an iterable or the length of a sequence",
-    Category: "Built-in",
-  },
-  {
-    id: 63,
-    method: "max()",
-    syntax: "max(iterable, *[, key, default])",
-    exampleOfUse:
-      "my_list = [3, 1, 4, 1, 5, 9, 2]\nmax_num = max(my_list)\n# Result: max_num = 9",
-    ReturnValue:
-      "The maximum item from an iterable (or the maximum of multiple arguments)",
     Category: "Built-in",
   },
   {
@@ -729,26 +629,6 @@ const python = [
     Category: "Built-in",
   },
   {
-    id: 80,
-    method: "map()",
-    syntax: "map(function, iterable, /)",
-    exampleOfUse:
-      "my_list = [1, 2, 3]\ndoubled = map(lambda x: x * 2, my_list)\n# Result: doubled = [2, 4, 6]",
-    ReturnValue:
-      "An iterator that applies the function to all items in the iterable",
-    Category: "Built-in",
-  },
-  {
-    id: 81,
-    method: "filter()",
-    syntax: "filter(function, iterable, /)",
-    exampleOfUse:
-      "my_list = [1, 2, 3, 4, 5]\nfiltered = filter(lambda x: x % 2 == 0, my_list)\n# Result: filtered = [2, 4]",
-    ReturnValue:
-      "An iterator containing elements from the iterable for which the function returns true",
-    Category: "Built-in",
-  },
-  {
     id: 82,
     method: "any()",
     syntax: "any(iterable, /)",
@@ -756,16 +636,6 @@ const python = [
       "my_list = [True, True, False]\nresult = any(my_list)\n# Result: result = True",
     ReturnValue:
       "True if any element in the iterable is true (or empty iterable), otherwise False",
-    Category: "Built-in",
-  },
-  {
-    id: 83,
-    method: "all()",
-    syntax: "all(iterable, /)",
-    exampleOfUse:
-      "my_list = [True, True, False]\nresult = all(my_list)\n# Result: result = False",
-    ReturnValue:
-      "True if all elements in the iterable are true (or empty iterable), otherwise False",
     Category: "Built-in",
   },
   {

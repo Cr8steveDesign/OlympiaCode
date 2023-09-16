@@ -1,7 +1,7 @@
 // HTML, Attributes and Short Description of their uses
 // Helpful for remembering
 
-const htmlElementsAndAttributes = [
+const html = [
   {
     id: 1,
     name: "html",
@@ -473,4 +473,4 @@ const htmlElementsAndAttributes = [
   },
 ];
 
-module.exports = htmlElementsAndAttributes;
+module.exports = html;

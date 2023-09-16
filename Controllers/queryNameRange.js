@@ -2,10 +2,11 @@ const javascript = require("../Data/Javascript");
 const python = require("../Data/Python");
 const html = require("../Data/Html");
 const css = require("../Data/Css");
+const { sortCSS, sortHTML, sortPython, sortJS } = require("../sortingFunction");
 
 const queryNameRange = (req, res) => {
-  let start = undefined;
-  let end = undefined;
+  let start = 0;
+  let end = 85;
   let data = undefined;
 
   if (req.query.start) {
@@ -17,7 +18,7 @@ const queryNameRange = (req, res) => {
 
   switch (req.query.name) {
     case "javascript":
-      data = javascript.slice(start - 1, end);
+      data = javascript.sort(sortJS).slice(start - 1, end);
       return res.status(200).json({
         success: true,
         Author: "OlympiaCode - Stephen Omoregie",
@@ -27,7 +28,7 @@ const queryNameRange = (req, res) => {
       break;
 
     case "python":
-      data = python.slice(start - 1, end);
+      data = python.sort(sortPython).slice(start - 1, end);
       return res.status(200).json({
         success: true,
         Author: "OlympiaCode - Stephen Omoregie",
@@ -37,7 +38,7 @@ const queryNameRange = (req, res) => {
       break;
 
     case "html":
-      data = html.slice(start - 1, end);
+      data = html.sort(sortHTML).slice(start - 1, end);
       return res.status(200).json({
         success: true,
         Author: "OlympiaCode - Stephen Omoregie",
@@ -47,7 +48,7 @@ const queryNameRange = (req, res) => {
       break;
 
     case "css":
-      data = css.slice(start - 1, end);
+      data = css.sort(sortCSS).slice(start - 1, end);
       return res.status(200).json({
         success: true,
         Author: "OlympiaCode - Stephen Omoregie",

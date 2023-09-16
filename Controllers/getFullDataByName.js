@@ -18,10 +18,10 @@ const getFullDataByName = (req, res) => {
     return res.status(200).json({ success: true, data: python });
   }
   if (urlName === "html") {
-    return res.status(200).json({ success: true, data: css });
+    return res.status(200).json({ success: true, data: html });
   }
   if (urlName === "css") {
-    return res.status(200).json({ success: true, data: html });
+    return res.status(200).json({ success: true, data: css });
   }
 
   return res.status(404).json({ success: false, data: [] });

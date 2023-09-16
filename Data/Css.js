@@ -1,7 +1,7 @@
 // Data containing Cascading StyleSheet (CSS)
 // Properties, Short Description and example of their Use
 
-const cssProperties = [
+const css = [
   {
     id: 1,
     property: "color",
@@ -632,4 +632,4 @@ const cssProperties = [
   },
 ];
 
-module.exports = cssProperties;
+module.exports = css;

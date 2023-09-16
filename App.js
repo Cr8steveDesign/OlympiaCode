@@ -54,6 +54,6 @@ app.get("*", (req, res) => {
 
 /**Start Http methods for server */
 // Listening for events on the server
-app.listen(5500, () => console.log("Server is running"));
+app.listen(PORT, () => console.log("Server is running"));
 
 // Controllers

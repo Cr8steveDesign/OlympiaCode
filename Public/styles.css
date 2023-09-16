@@ -205,6 +205,7 @@ header {
   align-content: center;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
 }
 
 .features-image-container {
@@ -292,6 +293,7 @@ footer {
   align-content: center;
   gap: 2rem;
   overflow-y: hidden;
+  z-index: 3;
 }
 
 .footer-links {
@@ -310,42 +312,6 @@ footer {
     opacity: 0.8;
   }
 }
-.code-container {
-  height: 90dvh;
-  min-height: 90dvh;
-}
-#form-container {
-  margin: auto;
-  height: max-content;
-  max-height: max-content;
-  max-width: 600px;
-  width: 80%;
-  /* min-height: 50%; */
-  background-color: white;
-  border-radius: 1rem;
-  padding: 3rem;
-
-  & input,
-  select,
-  option {
-    width: 100%;
-    height: 2rem;
-    font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    background-color: rgb(214, 232, 255);
-    outline: none;
-    border: 3px solid var(--main-color);
-  }
-
-  & .range {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-}
 
 /*Utility Classes */
 
@@ -357,8 +323,8 @@ footer {
 }
 
 .appear {
-  animation-name: fadeOut;
-  animation-duration: 2s;
+  animation-name: appear;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }

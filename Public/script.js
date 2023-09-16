@@ -1,18 +1,26 @@
-const imageUrls = ["images/happy-girl.png", "images/happy-boy.png"];
+const imageUrls = [
+  "images/happy-girl.png",
+  "images/happy.png",
+  "images/happy-girl1.png",
+  "images/happy-boy1.png",
+];
 
-// Add year dynamically on the footer
-const year_text = document.querySelector("#footer-year");
-year_text.textContent = new Date().getFullYear(); //+ new Date().toDateString();
+let index = 0;
 
 const feature_image = document.querySelector("#feature-image");
 
 feature_image.addEventListener("mouseover", (e) => {
-  feature_image.setAttribute("src", `${imageUrls[1]}`);
+  if (index > 4 || index == 0) index = 1;
+
+  feature_image.classList.add("appear");
+  feature_image.setAttribute("src", `${imageUrls[index]}`);
+  index += 1;
   //   feature_image.classList.toggle("dissolve");
   //   feature_image.classList.toggle("appear");
 });
 
 feature_image.addEventListener("mouseout", (e) => {
+  feature_image.classList.toggle("appear");
   feature_image.setAttribute("src", `${imageUrls[0]}`);
   //   feature_image.classList.toggle("dissolve");
   //   feature_image.classList.toggle("appear");
