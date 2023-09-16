@@ -4,141 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🚀 OlympiaCode | Free Code API</title>
-	<script src="codescript.js" defer></script>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="codes.css">
+    <script src="codescript.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="codes.css" />
 
-  <!-- Code highlighting library -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script> -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
   </head>
   <body>
     <header>
       <div class="container">
-      
-      <div class="navigation-title">OlympiaCode</div>
+        <div class="navigation-title">OlympiaCode</div>
 
-      <!-- Navigation Menu Starts Here -->
-      <nav class="navigation-container" style="width: 100%">
-        <ul class="navigation-links">
-          <li class="link"><a title="Home" href="/">Home</a></li>
-          <li class="link">
-            <a title="Code Snippets" href="/code-snippets">Code Snippets</a>
-          </li>
-          <li class="link"><a title="API" href="/api">API</a></li>
-          <li class="link"><a title="Blog" href="/blog">Blog</a></li>
-          <li class="link">
-            <a id="connect"
-              title="Connect on Twitter"
-              href="https://twitter.com/Cre8steveDev"
-              >LET'S CONNECT</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <!-- Navigation Menu Starts Here -->
+        <nav class="navigation-container" style="width: 100%">
+          <ul class="navigation-links">
+            <li class="link"><a title="Home" href="/">Home</a></li>
+            <li class="link">
+              <a title="Code Snippets" href="/code-snippets">Code Snippets</a>
+            </li>
+            <li class="link"><a title="API" href="/api">API</a></li>
+            <li class="link"><a title="Blog" href="/blog">Blog</a></li>
+            <li class="link">
+              <a
+                id="connect"
+                title="Connect on Twitter"
+                href="https://twitter.com/Cre8steveDev"
+                >LET'S CONNECT</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
-    <!-- DISPLAY SELECTED CHOICE-->
-    <div id="choice-container hidden">
-      <!-- <img src="images/python.png" alt=""> -->
-      <h2 class="language">Programming Language: <span id="lang-title"></span></h2>
-      <p id="method-name">Name of the Method</p>
-      <p id="syntax">Here is the syntax of the Method</p>
-      <p id="description">Here's a Description!</p>
-      <div id="code-example">Here is an example use of the Method</div>
-  </div>
-  
 
     <!--Features Section Starts Here-->
     <!--Including the list of features and image grids-->
     <section class="code-container" id="learning">
-
       <div class="control-width">
-      
+        <div id="form-container">
+          <!-- DISPLAY SELECTED CHOICE-->
+          <div id="choice-container hidden">
+            <!-- <img src="images/python.png" alt=""> -->
+            <h2 class="language" id="lang-title"></h2>
+            <p id="method-name"></p>
+            <p><span id="syntax"></span></p>
+            <hr />
+            <p id="description"></p>
+            <div id="code-example">
+              <pre><code class="language-javascript" id="code-box">
+                </code>
+        </pre>
 
-      <div id="form-container">
-        <form action="/">
-          <label for="language">Choose From the Available Languages</label>
-          <select  name="language" id="language" required style="color: black;">
-            <option value="" disabled>Select an option</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Python">Python</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-          </select>
-          <div class="range">
+              <!-- End of Testing Code Embedding -->
+            </div>
+          </div>
 
-          <label for="Start"> Pick a Start Range
-            <input id="Start" type="number" name="Start" min="0" max="99" placeholder="Between 1 and 100" required>
-          </label>
+          <form action="/">
+            <label for="language">Choose From the Available Languages</label>
+            <select name="language" id="language" required style="color: black">
+              <option value="" disabled>Select an option</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+            </select>
+            <div class="range">
+              <label for="Start">
+                Pick a Start Range
+                <input
+                  id="Start"
+                  type="number"
+                  name="Start"
+                  min="0"
+                  max="99"
+                  placeholder="Between 1 and 100"
+                  required
+                />
+              </label>
 
-          <label for="End"> Pick an End Range 
-            <input id="End" type="number" name="End" min="1" max="100" placeholder="Between 1 and 100" required>
-          </label>
+              <label for="End">
+                Pick an End Range
+                <input
+                  id="End"
+                  type="number"
+                  name="End"
+                  min="1"
+                  max="100"
+                  placeholder="Between 1 and 100"
+                  required
+                />
+              </label>
+            </div>
+
+            <input id="retrieve" type="button" value="RETRIEVE CODES! 🚀" />
+          </form>
         </div>
 
-        <input id="retrieve" type="button" value="RETRIEVE CODES! 🚀">
-        </form>
-      </div>      
-
-      <!-- THE BEGINNING OF THE LISTS ITEMS -->
-      <div class="response-container hidden">
-        <ul id="list_repsonses">
-          <!-- LISTS WILL BE APPENDED HERE -->
-          
-        </ul>
+        <!-- THE BEGINNING OF THE LISTS ITEMS -->
+        <div class="response-container hidden">
+          <ul id="list_repsonses">
+            <!-- LISTS WILL BE APPENDED HERE -->
+          </ul>
+        </div>
       </div>
-    </div>
-
     </section>
-
-    <!-- <section class="overlay-code-response">
-      <div class="code-response-contianer">
-        <div id="code-response">
-          This is where the code is entered!
-        </div>
-      </div>
-    </section> -->
-	
 
     <!--FOOTER BEGINS HERE-->
     <footer class="footer-container">
-
       <p class="copyright">
         OlympiaCode | Copyright &copy;
         <span id="footer-year">2023</span> Cre8Steve
       </p>
-	  <ul class="footer-links">
-		<li class="link"><a title="Home" href="/">Home</a></li>
-		<li class="link">
-		  <a title="Languages" href="#languages">Languages</a>
-		</li>
-		<li class="link"><a title="API" href="/api">API</a></li>
-		<li class="link"><a title="Blog" href="/">Blog</a></li>
-		<li class="link">
-		  <a
-			title="Connect on Twitter"
-			href="https://twitter.com/Cre8steveDev"
-			>LET'S CONNECT</a
-		  >
-		</li>
-	  </ul>
-	</nav>
-
-  <!-- Testing Code Embedding -->
-  <!-- <pre><code class="language-javascript">
-    function helloWorld(variablee){<br>
-      const steve = "Omoregie Stephen";<br>
-      console.log(steve);
-    }
-    </code></pre> -->
-
-    <!-- End of Testing Code Embedding -->
+      <ul class="footer-links">
+        <li class="link"><a title="Home" href="/">Home</a></li>
+        <li class="link">
+          <a title="Languages" href="#languages">Languages</a>
+        </li>
+        <li class="link"><a title="API" href="/api">API</a></li>
+        <li class="link"><a title="Blog" href="/">Blog</a></li>
+        <li class="link">
+          <a title="Connect on Twitter" href="https://twitter.com/Cre8steveDev"
+            >LET'S CONNECT</a
+          >
+        </li>
+      </ul>
     </footer>
-    <!-- <script>
-      Prism.highlightAll();
-    </script> -->
   </body>
 </html>

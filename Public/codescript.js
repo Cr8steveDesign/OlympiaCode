@@ -121,15 +121,41 @@ function placeEventListeners() {
   const allResponses = document.querySelectorAll(".response");
 
   allResponses.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      let elementID = 0;
-      if (e.target.id == "method-name") elementID = e.target.parentElement.id;
-      else elementID = e.target.id;
-
-      console.log("Element ID Value: ", elementID);
-      console.log("currentData Value: ", currentData);
-    });
+    item.addEventListener("click", handleClick);
   });
   // console.log(currentData);
   // console.log(allResponses);
 }
+
+///////////////////////
+// HANDLE ITEM/RESPONSE CLICK OF SINGLE METHODS
+////////////////////////////
+
+const handleClick = (e) => {
+  let elementID = 0;
+  const language_title = document.querySelector("#lang-title");
+  const method_title = document.querySelector("#method-name");
+  const syntax = document.querySelector("#syntax");
+  const code_box = document.querySelector("#code-box");
+  const description = document.querySelector("#description");
+  if (e.target.id == "method-name") elementID = e.target.parentElement.id;
+  else elementID = e.target.id;
+
+  console.log(elementID);
+  let current_method = currentData.filter(
+    (current) => current.id === Number(elementID)
+  );
+
+  let codeExample = current_method[0].exampleOfUse; //.replace("\n", "<br>");
+
+  language_title.innerText = "Programming Language: " + language_name;
+  method_title.innerText = "Function: " + current_method[0].method;
+  syntax.innerText = "Syntax: " + current_method[0].syntax;
+  description.innerText = "Return Value: " + current_method[0].ReturnValue;
+  code_box.innerText = codeExample;
+
+  setTimeout(window.Prism.highlightAll(), 2000);
+
+  console.log("Element ID Value: ", elementID);
+  console.log("currentData Value: ", currentData);
+};
